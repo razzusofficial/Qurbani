@@ -11,6 +11,9 @@ const Book = () => {
 
     const [myBool, setmyBool] = useState(1);
     let component;
+    let activate = false;
+    let activate2 = false;
+    let activate3 = false;
     function toggleBool() {
       setmyBool(2)
     }
@@ -19,10 +22,13 @@ const Book = () => {
     }
     if(myBool == 1){
       component =  <Tab_1 toggleBool={toggleBool} />;
+      activate = true;
     }else if(myBool == 2){
       component =  <Tab_2 toggleBool2={toggleBool2}/>;
+      activate2 = true;
     }else if(myBool == 3){
       component =  <Tab_3 />;
+      activate3 = true;
     }
   
   
@@ -40,7 +46,7 @@ const Book = () => {
         <div className="create_order">
           <h3 style={{ textAlign: "center" }}>Book your Qurbani using <span>simple steps.</span></h3>
         </div>
-        <Tabs />
+        <Tabs activate={[activate,activate2,activate3]}/>
         {component}
       </main>
       <Footer />
