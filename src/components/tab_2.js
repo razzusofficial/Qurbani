@@ -1,6 +1,6 @@
 import React from 'react'
 
-const tab_2 = () => {
+const tab_2 = (props) => {
     return (
         <>
             <div className="tab-2 cutomer_info">
@@ -64,7 +64,7 @@ const tab_2 = () => {
                                         <button className="back">Back</button>
                                     </div>
                                     <div className="col-7">
-                                        <button className="continue">Continue to shopping</button>
+                                        <button className="continue" onClick={props.toggleBool2}>Continue to shopping</button>
                                     </div>
                                 </div>
                                 <div className="row login">
@@ -122,7 +122,7 @@ const tab_2 = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div style="margin-top: 30px; text-align: center;">
+                                <div style={{marginTop: "30px",textAlign: "center"}}>
                                     <div className="title">Total Payable</div>
                                     <div className="amount">
                                         ₹ 11,173.84

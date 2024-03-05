@@ -2,7 +2,7 @@ import React from 'react';
 import sheep from '../img/sheep.png';
 import goat from '../img/goat.png';
 
-const tab_1 = () => {
+const tab_1 = (props) => {
     return (
         <>
             <div className="tab-1 delivery_info">
@@ -87,7 +87,7 @@ const tab_1 = () => {
                                         Total : Rs 37,976.36
                                     </div>
                                     <div className="proceed">
-                                        <button type="submit">Proceed</button>
+                                        <button onClick={props.toggleBool}>Proceed</button>
                                     </div>
 
                                 </div>
